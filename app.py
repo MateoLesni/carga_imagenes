@@ -5,6 +5,8 @@ from datetime import datetime
 from PIL import Image
 import json
 from pathlib import Path
+import zipfile
+from io import BytesIO
 
 # Configuración de la página
 st.set_page_config(
@@ -204,6 +206,62 @@ else:
         st.sidebar.info(f"**Rol:** Proveedores")
     st.sidebar.info(f"**Locales asignados:** {len(st.session_state.user_locales)}")
 
+    # Botón de descarga de datos (solo para PEDIDOS)
+    if st.session_state.user_rol == "pedidos":
+        st.sidebar.divider()
+        st.sidebar.subheader("💾 Respaldo de Datos")
+
+        df_backup = cargar_facturas()
+        csv_data = df_backup.to_csv(index=False).encode('utf-8')
+
+        st.sidebar.download_button(
+            label="📥 Descargar CSV",
+            data=csv_data,
+            file_name=f"facturas_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            mime="text/csv",
+            help="Descarga todas las facturas en formato CSV"
+        )
+
+        # Descargar índice de imágenes
+        with open(IMAGENES_FILE, "r", encoding="utf-8") as f:
+            imagenes_data = f.read()
+
+        st.sidebar.download_button(
+            label="📥 Descargar Índice Imágenes",
+            data=imagenes_data,
+            file_name=f"imagenes_index_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+            mime="application/json",
+            help="Descarga el índice de imágenes"
+        )
+
+        # Botón para descargar todas las imágenes en ZIP
+        if st.sidebar.button("📦 Generar ZIP de Imágenes", help="Genera un archivo ZIP con todas las imágenes"):
+            try:
+                # Crear ZIP en memoria
+                zip_buffer = BytesIO()
+                with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+                    # Agregar todas las imágenes
+                    imagenes_list = os.listdir(IMAGENES_DIR)
+                    if imagenes_list:
+                        for img_name in imagenes_list:
+                            img_path = IMAGENES_DIR / img_name
+                            if os.path.exists(img_path):
+                                zip_file.write(img_path, arcname=img_name)
+
+                zip_buffer.seek(0)
+
+                # Botón de descarga del ZIP
+                st.sidebar.download_button(
+                    label="⬇️ Descargar ZIP",
+                    data=zip_buffer.getvalue(),
+                    file_name=f"imagenes_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.zip",
+                    mime="application/zip",
+                    help=f"ZIP generado con {len(imagenes_list)} imagen(es)"
+                )
+                st.sidebar.success(f"✅ ZIP generado con {len(imagenes_list)} imagen(es)")
+            except Exception as e:
+                st.sidebar.error(f"❌ Error al generar ZIP: {str(e)}")
+
     # PÁGINA 1: CARGAR DATOS (Solo visible para usuarios no-PEDIDOS)
     if menu == "Cargar Datos":
         st.header("📤 Cargar Nueva Factura")
@@ -388,3 +446,13 @@ else:
                                         st.error(f"No se pudo cargar: {img_name}")
                     else:
                         st.warning("No hay imágenes adjuntas para esta factura.")
+
+# DEBUG: Mostrar ubicación de archivos en el sidebar (solo para verificación)
+with st.sidebar:
+    with st.expander("🔍 Debug Info"):
+        st.write(f"**Archivo CSV:** `{FACTURAS_FILE}`")
+        st.write(f"**Total registros:** {len(cargar_facturas())}")
+        if os.path.exists(FACTURAS_FILE):
+            st.success("✅ CSV existe")
+        else:
+            st.error("❌ CSV no existe")

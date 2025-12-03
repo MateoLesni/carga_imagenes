@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(pip install:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(powershell -Command \"Get-Content data\\facturas.csv | Measure-Object -Line\")",
+      "Bash(powershell -Command \"Get-Content data\\facturas.csv -Raw\")"
     ],
     "deny": [],
     "ask": []
