@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datos locales (NO subir al repo, se crean en producción)
+# data/
+# imagenes/
+
+# Nota: Comentados data/ e imagenes/ para que Git los trackee
+# En producción se crearán automáticamente

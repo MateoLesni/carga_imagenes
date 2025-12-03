@@ -1,0 +1,282 @@
+{
+  "usuarios": [
+    {
+      "username": "Trenes",
+      "password": "789",
+      "locales": [
+        "Alma Cerrito",
+        "Tostado Trenes"
+      ]
+    },
+    {
+      "username": "OnceGastro",
+      "password": "456",
+      "locales": [
+        "HO05",
+        "HO39",
+        "HO24",
+        "HO26"
+      ]
+    },
+    {
+      "username": "RetiroGastro",
+      "password": "123",
+      "locales": [
+        "JM61",
+        "JM62",
+        "ZT56"
+      ]
+    },
+    {
+      "username": "OpGroup",
+      "password": "753",
+      "locales": [
+        "La Mala",
+        "Crz Recoleta",
+        "Mil Vidas",
+        "Crz Polo",
+        "CMSUCRE",
+        "Malita",
+        "Costa 7070",
+        "Kona"
+      ]
+    },
+    {
+      "username": "PoloNg",
+      "password": "159",
+      "locales": [
+        "Laky",
+        "Galicia",
+        "La Lechería",
+        "Match",
+        "Madre",
+        "Ribs Polo",
+        "Nube Café",
+        "Volta",
+        "Cooffe & Polo",
+        "Polo Grill",
+        "Catering Polo",
+        "Catering William",
+        "Paseo Bocha",
+        "Imagina Bocha",
+        "Evento Polo",
+        "Candy",
+        "New Cafe",
+        "Heladeria Infanta",
+        "Blue Hourse",
+        "Fabric Polo"
+      ]
+    },
+    {
+      "username": "NG W",
+      "password": "793",
+      "locales": [
+        "Fabric",
+        "W Infanta",
+        "W Belgrano",
+        "Ribs Infanta",
+        "Heladeria Infanta"
+      ]
+    },
+    {
+      "username": "NomHouse",
+      "password": "999",
+      "locales": [
+        "Nomade",
+        "Polo House"
+      ]
+    },
+    {
+      "username": "Cochinchina",
+      "password": "481",
+      "locales": [
+        "Cochinchina"
+      ]
+    },
+    {
+      "username": "Tallarica Belgrano",
+      "password": "481",
+      "locales": [
+        "Tallarica"
+      ]
+    },
+    {
+      "username": "Planta Stgo",
+      "password": "482",
+      "locales": [
+        "SGOPAN"
+      ]
+    },
+    {
+      "username": "Constitucion Gastro",
+      "password": "654",
+      "locales": [
+        "TH16",
+        "TH10",
+        "TH09",
+        "TH18"
+      ]
+    },
+    {
+      "username": "Eventos",
+      "password": "112233",
+      "locales": [
+        "La Mala",
+        "Costa 7070",
+        "Malita",
+        "Crz Polo",
+        "Crz Recoleta"
+      ]
+    },
+    {
+      "username": "Multi Reservas",
+      "password": "556699",
+      "locales": [
+        "La Mala",
+        "Costa 7070",
+        "Malita",
+        "Crz Polo",
+        "Crz Recoleta"
+      ]
+    },
+    {
+      "username": "DanaOP",
+      "password": "998877",
+      "locales": [
+        "Crz Recoleta",
+        "La Mala",
+        "Mil Vidas",
+        "Crz Polo",
+        "CMSUCRE",
+        "Malita",
+        "Costa 7070",
+        "Kona"
+      ]
+    },
+    {
+      "username": "Mesas Vip",
+      "password": "664488",
+      "locales": [
+        "La Mala",
+        "Costa 7070",
+        "Malita",
+        "Crz Polo",
+        "Crz Recoleta"
+      ]
+    },
+    {
+      "username": "PEDIDOS",
+      "password": "pedidos123",
+      "rol": "pedidos",
+      "locales": [
+        "Alma Cerrito",
+        "Tostado Trenes",
+        "HO05",
+        "HO39",
+        "HO24",
+        "HO26",
+        "JM61",
+        "JM62",
+        "ZT56",
+        "La Mala",
+        "Crz Recoleta",
+        "Mil Vidas",
+        "Crz Polo",
+        "CMSUCRE",
+        "Malita",
+        "Costa 7070",
+        "Kona",
+        "Laky",
+        "Galicia",
+        "La Lechería",
+        "Match",
+        "Madre",
+        "Ribs Polo",
+        "Nube Café",
+        "Volta",
+        "Cooffe & Polo",
+        "Polo Grill",
+        "Catering Polo",
+        "Catering William",
+        "Paseo Bocha",
+        "Imagina Bocha",
+        "Evento Polo",
+        "Candy",
+        "New Cafe",
+        "Heladeria Infanta",
+        "Blue Hourse",
+        "Fabric Polo",
+        "Fabric",
+        "W Infanta",
+        "W Belgrano",
+        "Ribs Infanta",
+        "Nomade",
+        "Polo House",
+        "Cochinchina",
+        "Tallarica",
+        "SGOPAN",
+        "TH16",
+        "TH10",
+        "TH09",
+        "TH18"
+      ]
+    },
+    {
+      "username": "PROVEEDORES",
+      "password": "proveedores123",
+      "rol": "proveedores",
+      "locales": [
+        "Alma Cerrito",
+        "Tostado Trenes",
+        "HO05",
+        "HO39",
+        "HO24",
+        "HO26",
+        "JM61",
+        "JM62",
+        "ZT56",
+        "La Mala",
+        "Crz Recoleta",
+        "Mil Vidas",
+        "Crz Polo",
+        "CMSUCRE",
+        "Malita",
+        "Costa 7070",
+        "Kona",
+        "Laky",
+        "Galicia",
+        "La Lechería",
+        "Match",
+        "Madre",
+        "Ribs Polo",
+        "Nube Café",
+        "Volta",
+        "Cooffe & Polo",
+        "Polo Grill",
+        "Catering Polo",
+        "Catering William",
+        "Paseo Bocha",
+        "Imagina Bocha",
+        "Evento Polo",
+        "Candy",
+        "New Cafe",
+        "Heladeria Infanta",
+        "Blue Hourse",
+        "Fabric Polo",
+        "Fabric",
+        "W Infanta",
+        "W Belgrano",
+        "Ribs Infanta",
+        "Nomade",
+        "Polo House",
+        "Cochinchina",
+        "Tallarica",
+        "SGOPAN",
+        "TH16",
+        "TH10",
+        "TH09",
+        "TH18"
+      ]
+    }
+  ]
+}

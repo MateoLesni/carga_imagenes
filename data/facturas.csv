@@ -1,0 +1,5 @@
+id,fecha,local,proveedor,orden_compra,fecha_registro,usuario,mr_asignado,numero_mr
+1,2025-12-03,HO33,Pepito,4545,2025-12-03 09:06:22,,False,
+2,2025-12-04,Fa,pepe,5526,2025-12-03 09:09:18,,False,
+3,2025-12-03,La Mala,Chacabuco,4646,2025-12-03 09:42:01,DanaOP,True,12333.0
+4,2025-12-03,Crz Recoleta,Hieloli,1112,2025-12-03 09:53:55,DanaOP,False,
