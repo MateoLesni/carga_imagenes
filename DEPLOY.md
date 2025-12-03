@@ -21,7 +21,7 @@ Abre PowerShell o Git Bash en la carpeta `streamlit_app` y ejecuta:
 
 ```bash
 # Inicializar git (si no está inicializado)
-git init
+git initaaaa
 
 # Agregar todos los archivos
 git add .
